@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=4 uid="uid://dg8h4bpbf5jlm"]
+
+[ext_resource type="PackedScene" uid="uid://cqojhuvvyrure" path="res://Assets/Scenes/Area Functionality/area_template.tscn" id="1_kukkd"]
+[ext_resource type="PackedScene" uid="uid://uw0omp342ri4" path="res://Assets/Scenes/moving_platform_large.tscn" id="3_ns6a0"]
+
+[sub_resource type="Curve2D" id="Curve2D_4jut5"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 299)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_sc5ux"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -422)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_hyqe3"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -394, -157)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_an3c8"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -310)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ns6a0"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 127, 285)
+}
+point_count = 2
+
+[node name="AreaTemplate" instance=ExtResource("1_kukkd")]
+
+[node name="TileMap" parent="." index="0"]
+tile_map_data = PackedByteArray("AAADAAEAAAACAAUAAAADAAAAAAACAAQAAAACAAEAAAABAAUAAAACAAAAAAABAAQAAAABAAEAAAABAAUAAAABAAAAAAABAAQAAAAAAAEAAAABAAUAAAAAAAAAAAABAAQAAAD//wEAAAABAAUAAAD//wAAAAABAAQAAAD+/wEAAAABAAUAAAD+/wAAAAABAAQAAAD9/wEAAAABAAUAAAD9/wAAAAABAAQAAAD8/wEAAAAAAAUAAAD8/wAAAAAAAAQAAAADAAIAAAACAAUAAAACAAIAAAABAAUAAAABAAIAAAABAAUAAAAAAAIAAAABAAUAAAD//wIAAAABAAUAAAD+/wIAAAABAAUAAAD9/wIAAAABAAUAAAD8/wIAAAAAAAUAAAADAAMAAAACAAYAAAACAAMAAAABAAYAAAABAAMAAAABAAYAAAAAAAMAAAABAAYAAAD//wMAAAABAAYAAAD+/wMAAAABAAYAAAD9/wMAAAABAAYAAAD8/wMAAAAAAAYAAAAJAO3/AAACAAMAAAAIAO3/AAABAAMAAAAHAO3/AAABAAMAAAAGAO3/AAABAAMAAAAFAO3/AAAAAAMAAAAEAO7/AAACAAMAAAADAO7/AAABAAMAAAACAO7/AAABAAMAAAABAO7/AAABAAMAAAAAAO7/AAABAAMAAAD//+7/AAAAAAMAAAABANb/AAAAAAMAAAACANb/AAABAAMAAAADANb/AAABAAMAAAAEANb/AAABAAMAAAAFANb/AAABAAMAAAAGANb/AAABAAMAAAAHANb/AAABAAMAAAAIANb/AAACAAMAAADm/8z/AAACAAMAAADl/8z/AAABAAMAAADk/8z/AAABAAMAAADj/8z/AAABAAMAAADi/8z/AAABAAMAAADh/8z/AAABAAMAAADg/8z/AAABAAMAAADf/8z/AAABAAMAAADe/8z/AAABAAMAAADd/8z/AAABAAMAAADc/8z/AAAAAAMAAADb/83/AAADAAMAAADU/+H/AAAAAAMAAADV/+H/AAABAAMAAADW/+H/AAACAAMAAADX/+D/AAAAAAMAAADZ/+D/AAABAAMAAADY/+D/AAABAAMAAADa/+D/AAABAAMAAADb/+D/AAABAAMAAADc/+D/AAACAAMAAADc/+H/AAADAAIAAADd/+H/AAACAAMAAADn//T/AAAAAAMAAADo//T/AAABAAMAAADp//T/AAABAAMAAADr//T/AAABAAMAAADq//T/AAABAAMAAADt//T/AAABAAMAAADs//T/AAABAAMAAADu//T/AAABAAMAAADv//T/AAABAAMAAADw//T/AAACAAMAAADw//P/AAADAAAAAAA=")
+
+[node name="Player" parent="." index="1"]
+position = Vector2(-7, -216)
+
+[node name="MovingPlatformLarge" parent="MovingPlatforms" index="0" instance=ExtResource("3_ns6a0")]
+position = Vector2(-586, -1028)
+curve = SubResource("Curve2D_4jut5")
+
+[node name="MovingPlatformLarge2" parent="MovingPlatforms" index="1" instance=ExtResource("3_ns6a0")]
+position = Vector2(166, -528)
+curve = SubResource("Curve2D_sc5ux")
+path_time = 3.0
+
+[node name="MovingPlatformLarge3" parent="MovingPlatforms" index="2" instance=ExtResource("3_ns6a0")]
+position = Vector2(18, -889)
+curve = SubResource("Curve2D_hyqe3")
+path_time = 3.0
+
+[node name="MovingPlatformLarge4" parent="MovingPlatforms" index="3" instance=ExtResource("3_ns6a0")]
+position = Vector2(69, -219)
+curve = SubResource("Curve2D_an3c8")
+path_time = 2.0
+
+[node name="MovingPlatformLarge5" parent="MovingPlatforms" index="4" instance=ExtResource("3_ns6a0")]
+position = Vector2(-507, -704)
+curve = SubResource("Curve2D_ns6a0")
+path_time = 3.0
+
+[node name="AreaExit" parent="." index="3"]
+position = Vector2(-230, -441)
+
+[node name="EnergyCell" parent="EnergyCells" index="0"]
+position = Vector2(82, -904)
+
+[node name="EnergyCell2" parent="EnergyCells" index="1"]
+position = Vector2(60, -241)
+
+[node name="EnergyCell3" parent="EnergyCells" index="2"]
+position = Vector2(-342, -430)
+
+[node name="EnergyCell4" parent="EnergyCells" index="3"]
+position = Vector2(126, -530)
+
+[node name="AudioStreamPlayer" parent="." index="5"]
+volume_db = 0.0
+parameters/looping = true

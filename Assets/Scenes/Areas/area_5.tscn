@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=4 uid="uid://dwh8ealduka05"]
+
+[ext_resource type="PackedScene" uid="uid://cqojhuvvyrure" path="res://Assets/Scenes/Area Functionality/area_template.tscn" id="1_f5cdk"]
+
+[node name="AreaTemplate" instance=ExtResource("1_f5cdk")]
+
+[node name="TileMap" parent="." index="0"]
+tile_map_data = PackedByteArray("AAADAAEAAAACAAUAAAADAAAAAAACAAQAAAACAAEAAAABAAUAAAACAAAAAAABAAQAAAABAAEAAAABAAUAAAABAAAAAAABAAQAAAAAAAEAAAABAAUAAAAAAAAAAAABAAQAAAD//wEAAAABAAUAAAD//wAAAAABAAQAAAD+/wEAAAABAAUAAAD+/wAAAAABAAQAAAD9/wEAAAABAAUAAAD9/wAAAAABAAQAAAD8/wEAAAAAAAUAAAD8/wAAAAAAAAQAAAADAAIAAAACAAUAAAACAAIAAAABAAUAAAABAAIAAAABAAUAAAAAAAIAAAABAAUAAAD//wIAAAABAAUAAAD+/wIAAAABAAUAAAD9/wIAAAABAAUAAAD8/wIAAAAAAAUAAAADAAMAAAACAAYAAAACAAMAAAABAAYAAAABAAMAAAABAAYAAAAAAAMAAAABAAYAAAD//wMAAAABAAYAAAD+/wMAAAABAAYAAAD9/wMAAAABAAYAAAD8/wMAAAAAAAYAAAADAP7/AAACAAMAAAACAP7/AAAAAAMAAAADAPz/AAACAAMAAAACAPz/AAAAAAMAAAADAPr/AAACAAMAAAACAPr/AAAAAAMAAAADAPj/AAACAAMAAAACAPj/AAAAAAMAAAADAPb/AAACAAMAAAACAPb/AAAAAAMAAAADAPT/AAACAAMAAAACAPT/AAAAAAMAAAAHAPT/AAACAAMAAAAGAPT/AAABAAMAAAAFAPT/AAAAAAMAAAALAPT/AAACAAMAAAAKAPT/AAAAAAMAAAAQAPT/AAACAAMAAAAPAPT/AAAAAAMAAAA=")
+
+[node name="AreaExit" parent="." index="3"]
+position = Vector2(275, -422)
+
+[node name="EnergyCell" parent="EnergyCells" index="0"]
+position = Vector2(63, -256)
+
+[node name="EnergyCell2" parent="EnergyCells" index="1"]
+position = Vector2(65, -383)
+
+[node name="EnergyCell3" parent="EnergyCells" index="2"]
+position = Vector2(69, -322)
+
+[node name="EnergyCell4" parent="EnergyCells" index="3"]
+position = Vector2(125, -417)
+
+[node name="AudioStreamPlayer" parent="." index="5"]
+volume_db = 0.12
+parameters/looping = true
